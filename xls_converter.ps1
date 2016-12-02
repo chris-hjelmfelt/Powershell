@@ -19,8 +19,10 @@ $xlFixedFormat = [Microsoft.Office.Interop.Excel.XlFileFormat]::xlOpenXMLWorkboo
 
 $excel = New-Object -ComObject excel.application
 $excel.visible = $true
-$path = "C:\Users\chjelmfe\Documents\Dust_Slides\"
-$folderpath = $path + $folder
+
+$path = split-path $SCRIPT:MyInvocation.MyCommand.Path -parent
+$folderpath = $path + "\" + $folder
+write $folderpath
 $filetype ="*xls"
 
 Get-ChildItem -Path $folderpath -Include $filetype -recurse | 
@@ -36,7 +38,7 @@ ForEach-Object `
 	$oldFolder = $path.substring(0, $path.lastIndexOf("\")) + "\old"
 	$currentfolder = Split-Path (Split-Path $path -Parent) -Leaf   
 
-	#write-host $oldFolder
+	#write $oldFolder
 	if(-not (test-path $oldFolder))
 	{
 		"Folder:  $currentfolder "
@@ -51,3 +53,11 @@ $excel.Quit()
 $excel = $null
 [gc]::collect()
 [gc]::WaitForPendingFinalizers()
+
+# print to screen: variables can use the write command, strings and combos need parenthsis
+# examples: 
+# "Hello World"
+# write $path
+# "You are here: $path"
+
+# Find path to script: split-path $SCRIPT:MyInvocation.MyCommand.Path -parent
