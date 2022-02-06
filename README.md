@@ -1,2 +1,6 @@
 # Powershell
-A few useful powershell scripts. See usage notes on each script. 
+A few useful powershell scripts. Some scripts have their own usage notes. 
+
+How to run:
+
+> Powershell.exe -executionpolicy remotesigned -File  "C:\Users\<YourUserName>\Git\powershell\shell-columns.ps1"
