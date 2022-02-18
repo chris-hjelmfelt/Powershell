@@ -1,0 +1,18 @@
+Powershell Notes
+------------------
+
+You can use Find-Module -Command 'Get-FileMetaData' to see which module(s) provide a function with that name. For example:
+
+Find-Module -Command 'Get-FileMetaData'
+
+Version      Name                  Repository   Description                                        
+-------      ----                  ----------   -----------                                        
+0.0.207      PSSharedGoods         PSGallery    Module covering functions that are shared within...
+5.0.0        FC_SysAdmin           PSGallery    General sys admin functions                        
+4.5.1        CPolydorou.FileSystem PSGallery    This module contains functions relative to files...
+
+
+If the module you want is in the list, then install it once and import it at the beginning of your script to load it:
+
+Install-Module "Name"
+Import-Module "Name"

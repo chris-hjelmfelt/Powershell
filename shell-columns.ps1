@@ -25,7 +25,7 @@
 	}
 }
 
-$picdata = Get-FileMetaData -Folder 'C:\Windows' 
+$picdata = Get-FileMetaData -Folder 'C:\Users\Chris\Git\test' 
 
 
 
