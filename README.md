@@ -1,6 +1,20 @@
-# Powershell
-A few useful powershell scripts. Some scripts have their own usage notes. 
+# Powershell    
+A variety of useful powershell scripts. Most scripts contain usage notes.
 
-How to run:
+### change-names-fromfile
+Changes a filenames in a folder to the names found in a textfile
 
-> Powershell.exe -executionpolicy remotesigned -File  "C:\Users\Legion4\Git\powershell\get-windows-lock-screen-pics.ps1"
+### change-names
+Finds files with a certain string in their name and changes that string to a new one
+
+### get-windows-lock-screen-pics
+Gets current Windows lock screen pictures and saves them
+
+### linearize
+Linearizes all xml files in a folder
+
+### shell-columns
+Prints details about items in a folder
+
+### xls-converter
+changes .xls files to .xlsx files 
