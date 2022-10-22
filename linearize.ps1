@@ -1,4 +1,5 @@
 # linearizes all xml files in a folder
+# removes all extra whitespace (double spaces, tabs, returns?)
 
 $count = 0
 $folder = 'C:\Users\Chris\Git\test'
