@@ -34,7 +34,28 @@ Get-ChildItem -Path $imgloc -Filter '*.jpg' | ForEach-Object {
 }
 #>
 
+### Regex Examples
+<#
+Read from the requested file, put double quotes around each item between commas
+ex: one, two, three -->  "one, "two", "three"
+$words = (Get-Content $filepathIn)  -replace '\w+', '"$&"' 
 
+Remove the space after the comma
+$words = $words -replace '\s', ''
+#>
+
+### Sorting 
+<#
+https://www.educba.com/powershell-sort-object/
+this works:
+$students = "Ranjan","Ajay","Vijay","Sujit","Ajeet","Akash","Vikash"
+$students | Sort-Object
+this doesn't:
+$filepathTest = Get-Content "C:\Users\Legion4\Desktop\TestWords.txt"
+$filepathTest | Sort-Object
+but this does, because reading the file created one object, but split turns it back into separate objects:
+$filepathTest -split "," | Sort-Object
+#>
 
 <#
 Function Get-Image{

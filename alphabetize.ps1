@@ -7,10 +7,6 @@
 
 $filepathIn = "C:\Users\Legion4\Desktop\WordList.txt"
 $filepathOut = "C:\Users\Legion4\Desktop\WordList-Sorted.txt"
-$words = (Get-Content $filepathIn)  -replace '\w+', '"$&"' 
-$words = $words -replace '\s', ''
+$words = (Get-Content $filepathIn)  -replace '\s', ''
+$words -split "," | Sort-Object -Unique | Out-File $filepathOut  
 
-# Currently this is failing to sort unless I put the words on separate lines but
-# according to this it should be working:
-# https://www.educba.com/powershell-sort-object/
-$words | Sort-Object -Unique  #| Out-File -Path $filepathOut  
