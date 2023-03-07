@@ -9,5 +9,5 @@ $filepathIn = "C:\Users\Legion4\Desktop\WordList.txt"
 $filepathOut = "C:\Users\Legion4\Desktop\WordList-Sorted.txt"
 $words = (Get-Content $filepathIn)  -replace '\s', ''
 $words = $words -split "," | Sort-Object -Unique 
-$result = $words -join ',' | Out-File $filepathOut  
+$result = $words -join ', ' | Out-File $filepathOut  
 

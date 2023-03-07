@@ -13,6 +13,9 @@ Gets current Windows lock screen pictures and saves them
 ### linearize
 Linearizes all xml files in a folder
 
+### little-bot
+Explores automated mouse and keyboard input - needs to be run from the Powershell application, run as administrator
+
 ### shell-columns
 Prints details about items in a folder
 
