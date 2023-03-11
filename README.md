@@ -15,8 +15,6 @@ Linearizes all xml files in a folder
 
 ### little-bot
 Explores automated mouse and keyboard input   
-- needs to be run from the Powershell application, run as administrator
-- Notepad must be open and not minimized
 
 ### shell-columns
 Prints details about items in a folder

@@ -1,3 +1,9 @@
+# Application to bot must be open and not minimized
+# Run Powershell as administrator
+# Move powershell out of the way so before you run the following 
+# command you can place your mouse where you want it on the other app
+# > .\little-bot.ps1
+# This was continued is a separate git repo
 
 Write-Host "Starting MouseMove"
 $MYJOB = Start-Job -ScriptBlock {  
