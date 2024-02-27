@@ -7,14 +7,14 @@
 # First you need to set up a folder you want them to be saved to and put the path into $finishedImageFolder   
 # Then change the user from "Legion4" to your user everywhere that a path is required. Including the run command below   
 # Then run the following at a windows command prompt:  
-# Powershell.exe -executionpolicy remotesigned -File  "C:\Users\Legion4\Git\powershell\get-windows-lock-screen-pics.ps1"  
+# Powershell.exe -executionpolicy remotesigned -File  "C:\Users\Legion5\Git\powershell\get-windows-lock-screen-pics.ps1"  
 # 
 # You could also set this script up to run automatically on a schedule
 # ---------------------------------------------------------------------------------------------
 
 
-$windowsImagefolder = "C:\Users\Legion4\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets"
-$finishedImageFolder = "C:\Users\Legion4\Pictures\Misc\Windows Lock Screen"
+$windowsImagefolder = "C:\Users\Legion5\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets"
+$finishedImageFolder = "C:\Users\Legion5\Pictures\Misc\Windows Lock Screen"
 $tempfolder = $finishedImageFolder + "\temp"
 $shellApp = New-Object -ComObject Shell.Application
 $folderNamespaceWin = $shellApp.Namespace($windowsImagefolder)
@@ -26,7 +26,7 @@ $count = 100000
 Get-ChildItem -Path "$windowsImagefolder"  -File |
   ForEach-Object {
     $image = $folderNamespaceWin.ParseName($_.Name)
-    $oldpath = 'C:\Users\Legion4\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\' + $image.Name  
+    $oldpath = 'C:\Users\Legion5\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\' + $image.Name  
     $temppath = $tempfolder + '\' + $count + '.jpg'
 
     # Select the correct Size
