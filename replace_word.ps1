@@ -12,10 +12,10 @@ $files = Get-ChildItem "C:\Users\Legion6\Desktop\Grids"
 foreach ($f in $files){
     $outfile = "C:\Users\Legion6\Desktop\Renamed\" + $f.Name
     Get-Content $f.FullName | 
-    ForEach-Object {$_ -replace "brownrock", "Brown Rock "} |
-    ForEach-Object {$_ -replace "greyrock", "grey rock "} |
-    ForEach-Object {$_ -replace "purplerock", "purple rock "} |
-    ForEach-Object {$_ -replace "waterrock", "wet rock "} |
-    ForEach-Object {$_ -replace "wetrock", "wet rock "} |
+    ForEach-Object {$_ -replace "small brown rocks/brownrock", "brown rocks/Brown Rock "} |
+    ForEach-Object {$_ -replace "grey rocks/greyrock", "grey rocks/grey rock "} |
+    ForEach-Object {$_ -replace "purple rocks/purplerock", "purple rocks/purple rock "} |
+    ForEach-Object {$_ -replace "wet rocks/waterrock", "wet rocks/wet rock "} |
+    ForEach-Object {$_ -replace "wet rocks/wetrock", "wet rocks/wet rock "} |
     Set-Content $outfile
 }
